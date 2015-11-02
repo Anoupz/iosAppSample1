@@ -10,14 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var catAge: UITextField!
+    
+    @IBOutlet var resultAge: UILabel!
+    
+    @IBAction func calculateCatYears(sender: AnyObject) {
+        var age = Int(catAge.text!)!
+        age = age * 7
+        resultAge.text = "\(age)";
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 
